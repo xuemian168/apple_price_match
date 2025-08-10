@@ -48,9 +48,10 @@
     "loading": "為替レート読み込み中..."
   },
   "country": {
-    "select": "国を選択",
-    "all": "すべての国",
-    "compare": "選択項目を比較"
+    "select": "国・地域を選択",
+    "all": "すべての国・地域",
+    "compare": "選択項目を比較",
+    "label": "国・地域"
   },
   "common": {
     "loading": "読み込み中...",

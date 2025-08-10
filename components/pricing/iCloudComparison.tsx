@@ -181,7 +181,7 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
                     >
                       <ArrowUpDown className="h-3 w-3" />
                     </motion.div>
-                    Country
+                    {t('country.label')}
                   </Button>
                   <Button
                     variant="ghost"

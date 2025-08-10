@@ -48,9 +48,10 @@
     "loading": "Loading exchange rates..."
   },
   "country": {
-    "select": "Select Countries",
-    "all": "All Countries",
-    "compare": "Compare Selected"
+    "select": "Seleccionar Países/Regiones",
+    "all": "Todos los Países/Regiones",
+    "compare": "Comparar seleccionados",
+    "label": "País/Región"
   },
   "common": {
     "loading": "Loading...",

@@ -55,9 +55,10 @@
     "cache_warning": "Data cached locally to reduce API calls"
   },
   "country": {
-    "select": "Select Countries",
-    "all": "All Countries",
-    "compare": "Compare Selected"
+    "select": "Select Countries/Regions",
+    "all": "All Countries/Regions", 
+    "compare": "Compare Selected",
+    "label": "Country/Region"
   },
   "homepage": {
     "hero": {

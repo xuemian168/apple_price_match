@@ -55,9 +55,10 @@
     "cache_warning": "数据已缓存到本地以减少API调用"
   },
   "country": {
-    "select": "选择国家 或 地区",
-    "all": "所有国家 或 地区",
-    "compare": "对比选中项"
+    "select": "选择国家或地区",
+    "all": "所有国家或地区",
+    "compare": "对比选中项",
+    "label": "国家或地区"
   },
   "homepage": {
     "hero": {

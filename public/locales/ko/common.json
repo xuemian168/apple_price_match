@@ -48,9 +48,10 @@
     "loading": "환율 로딩 중..."
   },
   "country": {
-    "select": "국가 선택",
-    "all": "모든 국가",
-    "compare": "선택 항목 비교"
+    "select": "국가/지역 선택",
+    "all": "모든 국가/지역",
+    "compare": "선택 항목 비교",
+    "label": "국가/지역"
   },
   "common": {
     "loading": "로딩 중...",

@@ -93,7 +93,7 @@ export function iCloudPricingTable({
                   onClick={() => onSortChange && handleSort('country')}
                 >
                   <div className="flex items-center gap-1">
-                    Country
+                    {t('country.label')}
                     {onSortChange && sortBy === 'country' && (
                       sortOrder === 'asc' ? 
                         <ChevronUp className="h-4 w-4" /> : 
