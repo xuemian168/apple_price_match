@@ -9,7 +9,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "docker:build": "docker build -t apple-price-match .",
-    "docker:run": "docker run -p 3000:3000 apple-price-match",
+    "docker:run": "docker run -p 3232:3000 apple-price-match",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
     "docker:dev": "docker-compose --profile dev up -d",
