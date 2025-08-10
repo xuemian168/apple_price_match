@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  apple-price-match:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apple-price-match
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - apple-price-match-network
+
+  # Optional: Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: apple-price-match-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - apple-price-match
+    restart: unless-stopped
+    networks:
+      - apple-price-match-network
+    profiles:
+      - nginx
+
+networks:
+  apple-price-match-network:
+    driver: bridge
+
+# Development version
+---
+version: '3.8'
+
+services:
+  apple-price-match-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: apple-price-match-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    profiles:
+      - dev
