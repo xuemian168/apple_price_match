@@ -32,7 +32,8 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
     data: pricingData, 
     loading: pricingLoading, 
     error: pricingError,
-    refetch: refetchPricing 
+    refetch: refetchPricing,
+    lastUpdated: pricingLastUpdated
   } = useiCloudPricing({
     plan: selectedPlan,
     countries: selectedCountries,
@@ -253,6 +254,19 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
                   {t('currency.rates_updated')}: {new Date(ratesLastUpdated).toLocaleString()}
                 </div>
                 
+                {/* Pricing data last updated */}
+                {pricingLastUpdated && (
+                  <div className="flex items-center gap-2 mt-1">
+                    <motion.div
+                      animate={{ opacity: [0.5, 1, 0.5] }}
+                      transition={{ duration: 2.5, repeat: Infinity }}
+                    >
+                      💰
+                    </motion.div>
+                    {t('icloud.data_updated')}: {new Date(pricingLastUpdated).toLocaleString()}
+                  </div>
+                )}
+                
                 {/* Cache status indicator */}
                 <div className="text-xs text-muted-foreground flex items-center gap-2 mt-1">
                   <motion.div
@@ -262,6 +276,17 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
                     💾
                   </motion.div>
                   <span>{t('currency.cache_warning')}</span>
+                </div>
+
+                {/* iCloud pricing cache info */}
+                <div className="text-xs text-muted-foreground flex items-center gap-2 mt-1">
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 3.2, repeat: Infinity }}
+                  >
+                    📱
+                  </motion.div>
+                  <span>{t('icloud.cache_info')}</span>
                 </div>
 
                 <AnimatePresence>

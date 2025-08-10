@@ -31,7 +31,9 @@
       "converted_price": "转换价格",
       "exchange_rate": "汇率",
       "last_updated": "最后更新"
-    }
+    },
+    "data_updated": "价格数据已更新",
+    "cache_info": "价格数据已缓存到本地以减少API调用"
   },
   "devices": {
     "title": "苹果设备定价",
@@ -52,7 +54,8 @@
     "no_conversion": "无需转换",
     "cached_data": "使用缓存数据（每30分钟刷新）",
     "fresh_data": "来自API的新鲜数据",
-    "cache_warning": "数据已缓存到本地以减少API调用"
+    "cache_warning": "数据已缓存到本地以减少API调用",
+    "last_updated": "上次更新时间"
   },
   "country": {
     "select": "选择国家或地区",

@@ -209,7 +209,7 @@ export function iCloudPricingTable({
                               className="space-y-1"
                             >
                               <div className="text-primary font-medium">
-                                1 {item.originalCurrency} = {exchangeRates[item.originalCurrency]?.toFixed(4)} {targetCurrency}
+                                1 {item.originalCurrency} = {(1 / exchangeRates[item.originalCurrency])?.toFixed(4)} {targetCurrency}
                               </div>
                               <div className="text-xs text-muted-foreground flex items-center justify-end gap-1">
                                 <span>{originalCurrency?.name}</span>

@@ -13,6 +13,7 @@ interface UseiCloudPricingReturn {
   loading: boolean;
   error: string | null;
   refetch: () => void;
+  lastUpdated: string | null;
 }
 
 export function useiCloudPricing({
@@ -23,6 +24,7 @@ export function useiCloudPricing({
   const [data, setData] = useState<PricingComparisonResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
 
   const fetchPricing = async () => {
     try {
@@ -44,6 +46,7 @@ export function useiCloudPricing({
 
       if (response.data.success && response.data.data) {
         setData(response.data.data);
+        setLastUpdated(response.data.timestamp);
       } else {
         setError(response.data.error || 'Failed to fetch iCloud pricing');
       }
@@ -66,5 +69,6 @@ export function useiCloudPricing({
     loading,
     error,
     refetch: fetchPricing,
+    lastUpdated,
   };
 }

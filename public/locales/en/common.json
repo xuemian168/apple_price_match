@@ -31,7 +31,9 @@
       "converted_price": "Converted Price",
       "exchange_rate": "Exchange Rate",
       "last_updated": "Last Updated"
-    }
+    },
+    "data_updated": "Pricing data updated",
+    "cache_info": "Pricing data cached locally to reduce API calls"
   },
   "devices": {
     "title": "Apple Device Pricing",
@@ -52,7 +54,8 @@
     "no_conversion": "No conversion",
     "cached_data": "Using cached data (refreshes every 30 minutes)",
     "fresh_data": "Fresh data from API",
-    "cache_warning": "Data cached locally to reduce API calls"
+    "cache_warning": "Data cached locally to reduce API calls",
+    "last_updated": "Last updated"
   },
   "country": {
     "select": "Select Countries/Regions",
