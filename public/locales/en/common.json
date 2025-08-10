@@ -1,0 +1,198 @@
+{
+  "site": {
+    "title": "Apple Price Match",
+    "description": "Compare Apple iCloud and device prices across different countries",
+    "tagline": "Find the best Apple deals worldwide"
+  },
+  "navigation": {
+    "home": "Home",
+    "icloud": "iCloud Pricing",
+    "devices": "Device Pricing",
+    "about": "About",
+    "language": "Language",
+    "currency": "Currency"
+  },
+  "icloud": {
+    "title": "iCloud Storage Pricing Comparison",
+    "description": "Compare iCloud storage plans and pricing across different countries",
+    "plans": {
+      "5gb": "5GB Free",
+      "50gb": "50GB",
+      "200gb": "200GB", 
+      "2tb": "2TB",
+      "6tb": "6TB",
+      "12tb": "12TB"
+    },
+    "features": {
+      "storage": "Storage",
+      "price_monthly": "Monthly Price",
+      "price_yearly": "Yearly Price",
+      "original_currency": "Original Currency",
+      "converted_price": "Converted Price",
+      "exchange_rate": "Exchange Rate",
+      "last_updated": "Last Updated"
+    }
+  },
+  "devices": {
+    "title": "Apple Device Pricing",
+    "description": "Compare Apple device prices across different countries",
+    "categories": {
+      "iphone": "iPhone",
+      "ipad": "iPad",
+      "mac": "Mac",
+      "watch": "Apple Watch",
+      "airpods": "AirPods"
+    }
+  },
+  "currency": {
+    "select": "Select Currency",
+    "rates_updated": "Exchange rates updated",
+    "loading": "Loading exchange rates...",
+    "same_currency": "Same Currency",
+    "no_conversion": "No conversion",
+    "cached_data": "Using cached data (refreshes every 30 minutes)",
+    "fresh_data": "Fresh data from API",
+    "cache_warning": "Data cached locally to reduce API calls"
+  },
+  "country": {
+    "select": "Select Countries",
+    "all": "All Countries",
+    "compare": "Compare Selected"
+  },
+  "homepage": {
+    "hero": {
+      "cta_icloud": "Compare iCloud Prices",
+      "cta_devices": "Device Prices (Coming Soon)"
+    },
+    "features": {
+      "title": "Why Choose Apple Price Match?",
+      "subtitle": "Get the best deals on Apple products and services worldwide",
+      "global_comparison": {
+        "title": "Global Price Comparison",
+        "description": "Compare Apple product prices across 50+ countries and regions worldwide."
+      },
+      "real_time_rates": {
+        "title": "Real-time Exchange Rates",
+        "description": "Live currency conversion powered by exchangerate-api.com for accurate pricing."
+      },
+      "fast_responsive": {
+        "title": "Fast & Responsive",
+        "description": "Lightning-fast comparison with beautiful, responsive design and sorting."
+      }
+    },
+    "quick_links": {
+      "title": "Start Comparing",
+      "subtitle": "Choose what you want to compare",
+      "icloud": {
+        "title": "iCloud Storage Plans",
+        "description": "Compare iCloud storage pricing across different countries with real-time exchange rates. Find the best deals on all storage plans from 50GB to 12TB.",
+        "plans": "Available Plans:",
+        "plans_range": "50GB to 12TB",
+        "countries": "Countries:",
+        "countries_count": "50+ regions",
+        "exchange_rates": "Exchange Rates:",
+        "live_data": "Live API data"
+      },
+      "devices": {
+        "title": "Apple Devices",
+        "coming_soon": "Coming Soon",
+        "description": "Compare iPhone, iPad, Mac, Apple Watch, and AirPods pricing across different countries (in development).",
+        "device_types": "Device Types:",
+        "device_list": "iPhone, iPad, Mac...",
+        "status": "Status:",
+        "under_development": "Under Development"
+      }
+    },
+    "data_sources": {
+      "title": "Data Sources & Accuracy",
+      "pricing_data": {
+        "title": "💰 Pricing Data",
+        "description": "All Apple product and service prices are sourced directly from official Apple websites and support documentation to ensure accuracy and up-to-date information."
+      },
+      "exchange_rates": {
+        "title": "💱 Exchange Rates",
+        "description": "Real-time currency conversion powered by ExchangeRate-API.com, providing live market rates with automatic fallback for reliability."
+      },
+      "disclaimer": "Exchange rates are updated in real-time. If the external API is unavailable, we use recent cached rates to ensure continuous service. All pricing comparisons are for reference only and may vary based on local taxes, promotions, and regional policies."
+    }
+  },
+  "about": {
+    "title": "About Apple Price Match",
+    "subtitle": "Apple Price Match is your go-to platform for comparing Apple product and service prices across different countries and regions worldwide.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe that everyone should have access to the best Apple deals, regardless of their location. Our platform empowers users to make informed purchasing decisions by providing transparent, real-time pricing comparisons across global Apple stores.",
+      "details": "Whether you're looking for the best iCloud storage deal or planning to purchase the latest iPhone, our comprehensive price comparison tool helps you find the most cost-effective options available worldwide."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "What drives us to create the best price comparison experience",
+      "accuracy": {
+        "title": "Accuracy",
+        "description": "We provide accurate, up-to-date pricing information sourced directly from official Apple stores worldwide."
+      },
+      "user_friendly": {
+        "title": "User-Friendly",
+        "description": "Our interface is designed to be intuitive and accessible for users of all technical levels."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Fast loading times and responsive design ensure a smooth experience across all devices."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Built by Apple enthusiasts, for Apple enthusiasts who want the best deals."
+      }
+    },
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Current and upcoming features of Apple Price Match",
+      "available": {
+        "title": "Available Now",
+        "icloud": "iCloud storage pricing comparison across 50+ countries and regions",
+        "rates": "Real-time currency conversion with live exchange rates from ExchangeRate-API.com",
+        "languages": "Multi-language support (English, Chinese with easy expansion)",
+        "responsive": "Responsive design optimized for desktop, tablet, and mobile devices",
+        "animations": "Beautiful animations and interactive user interface",
+        "sorting": "Advanced sorting and filtering options for price comparison"
+      },
+      "coming_soon": {
+        "title": "Coming Soon",
+        "devices": "iPhone, iPad, Mac, Apple Watch, and AirPods pricing comparison",
+        "history": "Price history tracking and trend analysis",
+        "alerts": "Deal alerts and price drop notifications",
+        "api": "Public API for developers and integration partners"
+      }
+    },
+    "technical": {
+      "title": "Technical Details",
+      "subtitle": "Built with modern technology for the best performance",
+      "nextjs": "Next.js 14",
+      "nextjs_desc": "React Framework",
+      "typescript": "TypeScript",
+      "typescript_desc": "Type Safety",
+      "tailwind": "Tailwind CSS",
+      "tailwind_desc": "Styling & UI",
+      "framer": "Framer Motion",
+      "framer_desc": "Animations",
+      "shadcn": "shadcn/ui",
+      "shadcn_desc": "Component Library",
+      "i18n": "next-i18next",
+      "i18n_desc": "Internationalization",
+      "description": "Our platform is built with performance, accessibility, and user experience as top priorities. We use server-side rendering for fast initial loads, implement responsive design patterns, and provide real-time data updates to ensure the best experience across all devices."
+    },
+    "disclaimer": {
+      "title": "Important Disclaimer",
+      "content": "Apple Price Match is an independent comparison platform and is not affiliated with Apple Inc. All prices displayed are sourced from official Apple stores and are subject to change. We recommend verifying current pricing on official Apple websites before making any purchases. Exchange rates are updated in real-time but may not reflect instantaneous market fluctuations. All pricing comparisons are for reference only and may vary based on local taxes, promotions, and regional policies."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close"
+  }
+}

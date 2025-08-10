@@ -1,0 +1,64 @@
+{
+  "site": {
+    "title": "Apple Price Match",
+    "description": "Compare Apple iCloud and device prices across different countries",
+    "tagline": "Find the best Apple deals worldwide"
+  },
+  "navigation": {
+    "home": "Home",
+    "icloud": "iCloud Pricing",
+    "devices": "Device Pricing",
+    "about": "About",
+    "language": "Language",
+    "currency": "Currency"
+  },
+  "icloud": {
+    "title": "iCloud Storage Pricing Comparison",
+    "description": "Compare iCloud storage plans and pricing across different countries",
+    "plans": {
+      "5gb": "5GB Free",
+      "50gb": "50GB",
+      "200gb": "200GB", 
+      "2tb": "2TB",
+      "6tb": "6TB",
+      "12tb": "12TB"
+    },
+    "features": {
+      "storage": "Storage",
+      "price_monthly": "Monthly Price",
+      "price_yearly": "Yearly Price",
+      "original_currency": "Original Currency",
+      "converted_price": "Converted Price"
+    }
+  },
+  "devices": {
+    "title": "Apple Device Pricing",
+    "description": "Compare Apple device prices across different countries",
+    "categories": {
+      "iphone": "iPhone",
+      "ipad": "iPad",
+      "mac": "Mac",
+      "watch": "Apple Watch",
+      "airpods": "AirPods"
+    }
+  },
+  "currency": {
+    "select": "Select Currency",
+    "rates_updated": "Exchange rates updated",
+    "loading": "Loading exchange rates..."
+  },
+  "country": {
+    "select": "Select Countries",
+    "all": "All Countries",
+    "compare": "Compare Selected"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close"
+  }
+}

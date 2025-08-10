@@ -1,0 +1,198 @@
+{
+  "site": {
+    "title": "苹果价格对比",
+    "description": "比较不同国家的苹果 iCloud 和设备价格",
+    "tagline": "寻找全球最优苹果价格"
+  },
+  "navigation": {
+    "home": "首页",
+    "icloud": "iCloud 定价",
+    "devices": "设备定价",
+    "about": "关于",
+    "language": "语言",
+    "currency": "货币"
+  },
+  "icloud": {
+    "title": "iCloud 存储价格对比",
+    "description": "比较不同国家的 iCloud 存储计划和价格",
+    "plans": {
+      "5gb": "5GB 免费",
+      "50gb": "50GB",
+      "200gb": "200GB", 
+      "2tb": "2TB",
+      "6tb": "6TB",
+      "12tb": "12TB"
+    },
+    "features": {
+      "storage": "存储空间",
+      "price_monthly": "月付价格",
+      "price_yearly": "年付价格",
+      "original_currency": "原始货币",
+      "converted_price": "转换价格",
+      "exchange_rate": "汇率",
+      "last_updated": "最后更新"
+    }
+  },
+  "devices": {
+    "title": "苹果设备定价",
+    "description": "比较不同国家的苹果设备价格",
+    "categories": {
+      "iphone": "iPhone",
+      "ipad": "iPad",
+      "mac": "Mac",
+      "watch": "Apple Watch",
+      "airpods": "AirPods"
+    }
+  },
+  "currency": {
+    "select": "选择货币",
+    "rates_updated": "汇率已更新",
+    "loading": "加载汇率中...",
+    "same_currency": "相同货币",
+    "no_conversion": "无需转换",
+    "cached_data": "使用缓存数据（每30分钟刷新）",
+    "fresh_data": "来自API的新鲜数据",
+    "cache_warning": "数据已缓存到本地以减少API调用"
+  },
+  "country": {
+    "select": "选择国家 或 地区",
+    "all": "所有国家 或 地区",
+    "compare": "对比选中项"
+  },
+  "homepage": {
+    "hero": {
+      "cta_icloud": "比较 iCloud 价格",
+      "cta_devices": "设备价格（即将推出）"
+    },
+    "features": {
+      "title": "为什么选择苹果价格对比？",
+      "subtitle": "获取全球最优苹果产品和服务价格",
+      "global_comparison": {
+        "title": "全球价格对比",
+        "description": "比较全球50多个国家和地区的苹果产品价格。"
+      },
+      "real_time_rates": {
+        "title": "实时汇率",
+        "description": "由 exchangerate-api.com 提供的实时货币转换，确保价格准确。"
+      },
+      "fast_responsive": {
+        "title": "快速响应",
+        "description": "闪电般快速的对比，美观响应式设计，支持排序功能。"
+      }
+    },
+    "quick_links": {
+      "title": "开始对比",
+      "subtitle": "选择您要对比的内容",
+      "icloud": {
+        "title": "iCloud 存储计划",
+        "description": "使用实时汇率比较不同国家的 iCloud 存储价格。寻找从50GB到12TB所有存储计划的最优价格。",
+        "plans": "可用计划：",
+        "plans_range": "50GB 至 12TB",
+        "countries": "国家：",
+        "countries_count": "50+ 地区",
+        "exchange_rates": "汇率：",
+        "live_data": "实时API数据"
+      },
+      "devices": {
+        "title": "苹果设备",
+        "coming_soon": "即将推出",
+        "description": "比较不同国家的 iPhone、iPad、Mac、Apple Watch 和 AirPods 价格（开发中）。",
+        "device_types": "设备类型：",
+        "device_list": "iPhone、iPad、Mac...",
+        "status": "状态：",
+        "under_development": "开发中"
+      }
+    },
+    "data_sources": {
+      "title": "数据来源与准确性",
+      "pricing_data": {
+        "title": "💰 定价数据",
+        "description": "所有苹果产品和服务价格均直接来源于苹果官方网站和支持文档，确保准确性和时效性。"
+      },
+      "exchange_rates": {
+        "title": "💱 汇率数据",
+        "description": "由 ExchangeRate-API.com 提供实时货币转换，提供实时市场汇率和自动容错保障。"
+      },
+      "disclaimer": "汇率实时更新。如果外部API不可用，我们使用近期缓存汇率确保服务连续性。所有价格对比仅供参考，实际价格可能因当地税收、促销和地区政策而有所差异。"
+    }
+  },
+  "about": {
+    "title": "关于苹果价格对比",
+    "subtitle": "苹果价格对比是您比较全球不同国家和地区苹果产品及服务价格的首选平台。",
+    "mission": {
+      "title": "我们的使命",
+      "description": "我们相信每个人都应该能够获得最优的苹果产品价格，无论身处何地。我们的平台通过提供透明、实时的全球苹果商店价格对比，帮助用户做出明智的购买决策。",
+      "details": "无论您是在寻找最优惠的iCloud存储套餐，还是计划购买最新的iPhone，我们全面的价格对比工具都能帮助您找到全球范围内最具性价比的选择。"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "subtitle": "驱动我们创造最佳价格对比体验的理念",
+      "accuracy": {
+        "title": "准确性",
+        "description": "我们直接从全球苹果官方商店获取准确、最新的定价信息。"
+      },
+      "user_friendly": {
+        "title": "用户友好",
+        "description": "我们的界面设计直观易用，适合所有技术水平的用户。"
+      },
+      "performance": {
+        "title": "高性能",
+        "description": "快速加载和响应式设计确保在所有设备上都有流畅的体验。"
+      },
+      "community": {
+        "title": "社区驱动",
+        "description": "由苹果爱好者开发，为追求最优价格的苹果爱好者服务。"
+      }
+    },
+    "features": {
+      "title": "我们提供的服务",
+      "subtitle": "苹果价格对比的当前功能和即将推出的功能",
+      "available": {
+        "title": "现已提供",
+        "icloud": "覆盖50多个国家和地区的iCloud存储价格对比",
+        "rates": "由ExchangeRate-API.com提供的实时汇率货币转换",
+        "languages": "多语言支持（中英文，可轻松扩展）",
+        "responsive": "针对桌面、平板和移动设备优化的响应式设计",
+        "animations": "美观的动画效果和交互式用户界面",
+        "sorting": "高级排序和筛选选项用于价格对比"
+      },
+      "coming_soon": {
+        "title": "即将推出",
+        "devices": "iPhone、iPad、Mac、Apple Watch和AirPods价格对比",
+        "history": "价格历史跟踪和趋势分析",
+        "alerts": "优惠提醒和降价通知",
+        "api": "面向开发者和集成伙伴的公共API"
+      }
+    },
+    "technical": {
+      "title": "技术细节",
+      "subtitle": "采用现代技术构建，确保最佳性能",
+      "nextjs": "Next.js 14",
+      "nextjs_desc": "React框架",
+      "typescript": "TypeScript",
+      "typescript_desc": "类型安全",
+      "tailwind": "Tailwind CSS",
+      "tailwind_desc": "样式和UI",
+      "framer": "Framer Motion",
+      "framer_desc": "动画效果",
+      "shadcn": "shadcn/ui",
+      "shadcn_desc": "组件库",
+      "i18n": "next-i18next",
+      "i18n_desc": "国际化",
+      "description": "我们的平台以性能、可访问性和用户体验为首要优先级。我们使用服务器端渲染实现快速初始加载，采用响应式设计模式，并提供实时数据更新，确保在所有设备上都有最佳体验。"
+    },
+    "disclaimer": {
+      "title": "重要免责声明",
+      "content": "苹果价格对比是一个独立的对比平台，与苹果公司无任何关联。显示的所有价格均来自苹果官方商店，价格可能随时变动。我们建议在购买前在苹果官方网站验证当前价格。汇率实时更新，但可能无法反映瞬时市场波动。所有价格对比仅供参考，实际价格可能因当地税收、促销活动和地区政策而有所不同。"
+    }
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "retry": "重试",
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "close": "关闭"
+  }
+}

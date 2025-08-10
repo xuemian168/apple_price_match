@@ -1,0 +1,64 @@
+{
+  "site": {
+    "title": "Apple価格比較",
+    "description": "世界各国のApple iCloudとデバイス価格を比較",
+    "tagline": "世界中で最高のAppleディールを見つけよう"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "icloud": "iCloud料金",
+    "devices": "デバイス料金",
+    "about": "概要",
+    "language": "言語",
+    "currency": "通貨"
+  },
+  "icloud": {
+    "title": "iCloudストレージ料金比較",
+    "description": "世界各国のiCloudストレージプランと料金を比較",
+    "plans": {
+      "5gb": "5GB 無料",
+      "50gb": "50GB",
+      "200gb": "200GB", 
+      "2tb": "2TB",
+      "6tb": "6TB",
+      "12tb": "12TB"
+    },
+    "features": {
+      "storage": "ストレージ",
+      "price_monthly": "月額料金",
+      "price_yearly": "年額料金",
+      "original_currency": "元通貨",
+      "converted_price": "換算価格"
+    }
+  },
+  "devices": {
+    "title": "Appleデバイス料金",
+    "description": "世界各国のAppleデバイス価格を比較",
+    "categories": {
+      "iphone": "iPhone",
+      "ipad": "iPad",
+      "mac": "Mac",
+      "watch": "Apple Watch",
+      "airpods": "AirPods"
+    }
+  },
+  "currency": {
+    "select": "通貨を選択",
+    "rates_updated": "為替レート更新済み",
+    "loading": "為替レート読み込み中..."
+  },
+  "country": {
+    "select": "国を選択",
+    "all": "すべての国",
+    "compare": "選択項目を比較"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "close": "閉じる"
+  }
+}

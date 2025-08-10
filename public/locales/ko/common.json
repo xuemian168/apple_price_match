@@ -1,0 +1,64 @@
+{
+  "site": {
+    "title": "Apple 가격 비교",
+    "description": "전 세계 Apple iCloud 및 디바이스 가격 비교",
+    "tagline": "전 세계 최고의 Apple 딜을 찾아보세요"
+  },
+  "navigation": {
+    "home": "홈",
+    "icloud": "iCloud 요금제",
+    "devices": "디바이스 요금제",
+    "about": "소개",
+    "language": "언어",
+    "currency": "통화"
+  },
+  "icloud": {
+    "title": "iCloud 스토리지 요금제 비교",
+    "description": "전 세계 iCloud 스토리지 플랜과 가격 비교",
+    "plans": {
+      "5gb": "5GB 무료",
+      "50gb": "50GB",
+      "200gb": "200GB", 
+      "2tb": "2TB",
+      "6tb": "6TB",
+      "12tb": "12TB"
+    },
+    "features": {
+      "storage": "저장공간",
+      "price_monthly": "월 요금",
+      "price_yearly": "년 요금",
+      "original_currency": "원본 통화",
+      "converted_price": "변환된 가격"
+    }
+  },
+  "devices": {
+    "title": "Apple 디바이스 요금제",
+    "description": "전 세계 Apple 디바이스 가격 비교",
+    "categories": {
+      "iphone": "iPhone",
+      "ipad": "iPad",
+      "mac": "Mac",
+      "watch": "Apple Watch",
+      "airpods": "AirPods"
+    }
+  },
+  "currency": {
+    "select": "통화 선택",
+    "rates_updated": "환율 업데이트됨",
+    "loading": "환율 로딩 중..."
+  },
+  "country": {
+    "select": "국가 선택",
+    "all": "모든 국가",
+    "compare": "선택 항목 비교"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류 발생",
+    "retry": "재시도",
+    "save": "저장",
+    "cancel": "취소",
+    "confirm": "확인",
+    "close": "닫기"
+  }
+}
