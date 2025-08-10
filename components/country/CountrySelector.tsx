@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/select';
 import { countries, getCountryByCode } from '@/data/countries';
 import { cn } from '@/lib/utils';
+import { CountryFlag } from '@/components/ui/country-flag';
 
 interface CountrySelectorProps {
   selectedCountries: string[];
@@ -56,7 +57,7 @@ export function CountrySelector({
           <SelectValue placeholder={t('country.select')}>
             {selectedCountries[0] && (
               <div className="flex items-center gap-2">
-                <span>{getCountryByCode(selectedCountries[0])?.flag}</span>
+                <CountryFlag countryCode={selectedCountries[0]} size="sm" />
                 <span>{getCountryByCode(selectedCountries[0])?.name}</span>
               </div>
             )}
@@ -66,7 +67,7 @@ export function CountrySelector({
           {countries.map((country) => (
             <SelectItem key={country.code} value={country.code}>
               <div className="flex items-center gap-2">
-                <span>{country.flag}</span>
+                <CountryFlag countryCode={country.code} size="sm" />
                 <span>{country.name}</span>
                 <span className="text-muted-foreground">({country.currency})</span>
               </div>
@@ -105,7 +106,7 @@ export function CountrySelector({
               onClick={() => handleCountryToggle(country.code)}
             >
               <div className="flex items-center gap-1 flex-1 min-w-0">
-                <span className="text-xs">{country.flag}</span>
+                <CountryFlag countryCode={country.code} size="sm" />
                 <span className="truncate">{country.name}</span>
               </div>
               {selectedCountries.includes(country.code) && (

@@ -15,6 +15,7 @@ import { iCloudPricing, iCloudPlan } from '@/types';
 import { getCountryByCode } from '@/data/countries';
 import { getCurrencyByCode } from '@/data/currencies';
 import { formatCurrency, formatDate } from '@/lib/utils';
+import { CountryFlag } from '@/components/ui/country-flag';
 
 interface iCloudPricingTableProps {
   plan: iCloudPlan;
@@ -143,7 +144,7 @@ export function iCloudPricingTable({
                   >
                       <TableCell className="font-medium">
                         <div className="flex items-center gap-2">
-                          <span className="text-lg">{country?.flag}</span>
+                          <CountryFlag countryCode={item.country} size="md" />
                           <div>
                             <div>{country?.name}</div>
                             <div className="text-xs text-muted-foreground">
