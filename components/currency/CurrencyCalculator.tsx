@@ -452,7 +452,7 @@ export function CurrencyCalculator({
             >
               <label className="text-xs font-semibold text-foreground/80 flex items-center gap-1">
                 <motion.div
-                  animate={{ bounce: [0, -3, 0] }}
+                  animate={{ y: [0, -3, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
                   ⚡
