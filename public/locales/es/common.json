@@ -51,7 +51,10 @@
     "select": "Seleccionar Países/Regiones",
     "all": "Todos los Países/Regiones",
     "compare": "Comparar seleccionados",
-    "label": "País/Región"
+    "label": "País/Región",
+    "search": "Buscar países/regiones...",
+    "clear_search": "Limpiar búsqueda",
+    "no_results": "No se encontraron países/regiones"
   },
   "common": {
     "loading": "Loading...",

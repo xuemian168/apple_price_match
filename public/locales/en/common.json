@@ -58,7 +58,10 @@
     "select": "Select Countries/Regions",
     "all": "All Countries/Regions", 
     "compare": "Compare Selected",
-    "label": "Country/Region"
+    "label": "Country/Region",
+    "search": "Search countries/regions...",
+    "clear_search": "Clear search",
+    "no_results": "No countries/regions found"
   },
   "homepage": {
     "hero": {

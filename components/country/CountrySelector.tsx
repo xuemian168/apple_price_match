@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { Check, ChevronDown } from 'lucide-react';
+import { Check, ChevronDown, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
@@ -27,6 +28,7 @@ export function CountrySelector({
   className 
 }: CountrySelectorProps) {
   const { t } = useTranslation('common');
+  const [searchQuery, setSearchQuery] = React.useState('');
 
   const handleCountryToggle = (countryCode: string) => {
     if (multiple) {
@@ -39,12 +41,38 @@ export function CountrySelector({
     }
   };
 
+  // Filter countries based on search query
+  const filteredCountries = React.useMemo(() => {
+    if (!searchQuery.trim()) return countries;
+    
+    const query = searchQuery.toLowerCase().trim();
+    return countries.filter((country) => 
+      country.name.toLowerCase().includes(query) ||
+      country.code.toLowerCase().includes(query) ||
+      country.currency.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
   const handleSelectAll = () => {
-    if (selectedCountries.length === countries.length) {
-      onSelectionChange([]);
+    if (selectedCountries.length === filteredCountries.length) {
+      // If all filtered countries are selected, deselect them
+      const newSelection = selectedCountries.filter(code => 
+        !filteredCountries.some(country => country.code === code)
+      );
+      onSelectionChange(newSelection);
     } else {
-      onSelectionChange(countries.map(c => c.code));
+      // Select all filtered countries (keep existing selections from other countries)
+      const combinedSelection = [
+        ...selectedCountries,
+        ...filteredCountries.map(c => c.code)
+      ];
+      const newSelection = Array.from(new Set(combinedSelection));
+      onSelectionChange(newSelection);
     }
+  };
+
+  const clearSearch = () => {
+    setSearchQuery('');
   };
 
   if (!multiple) {
@@ -64,7 +92,7 @@ export function CountrySelector({
           </SelectValue>
         </SelectTrigger>
         <SelectContent>
-          {countries.map((country) => (
+          {filteredCountries.map((country) => (
             <SelectItem key={country.code} value={country.code}>
               <div className="flex items-center gap-2">
                 <CountryFlag countryCode={country.code} size="sm" />
@@ -91,12 +119,39 @@ export function CountrySelector({
             onClick={handleSelectAll}
             className="text-xs"
           >
-            {selectedCountries.length === countries.length ? 'Clear All' : t('country.all')}
+            {selectedCountries.filter(code => filteredCountries.some(c => c.code === code)).length === filteredCountries.length ? 
+              'Clear All' : 
+              t('country.all')
+            }
           </Button>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-48 overflow-y-auto">
-          {countries.map((country) => (
+        {/* Search Input */}
+        <div className="relative mb-3">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            type="text"
+            placeholder={t('country.search')}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10 pr-8 h-9"
+          />
+          {searchQuery && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={clearSearch}
+              className="absolute right-1 top-1/2 transform -translate-y-1/2 h-7 w-7 p-0"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
+
+        {/* Countries Grid */}
+        {filteredCountries.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-48 overflow-y-auto">
+            {filteredCountries.map((country) => (
             <div
               key={country.code}
               className={cn(
@@ -113,8 +168,13 @@ export function CountrySelector({
                 <Check className="h-3 w-3 text-primary flex-shrink-0" />
               )}
             </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-4 text-muted-foreground text-sm">
+            {t('country.no_results')}
+          </div>
+        )}
       </div>
     </div>
   );

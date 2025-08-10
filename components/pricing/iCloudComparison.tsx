@@ -22,7 +22,7 @@ interface iCloudComparisonProps {
 export function iCloudComparison({ className }: iCloudComparisonProps) {
   const { t } = useTranslation('common');
   const [selectedPlan, setSelectedPlan] = useState('50gb');
-  const [selectedCountries, setSelectedCountries] = useState<string[]>(['US', 'AU', 'GB', 'CA', 'CN', 'JP', 'KR', 'TR', 'IN', 'BR', 'SG', 'MY']);
+  const [selectedCountries, setSelectedCountries] = useState<string[]>(countries.map(c => c.code));
   const [targetCurrency, setTargetCurrency] = useState('USD');
   const [showOriginalPrices, setShowOriginalPrices] = useState(true);
   const [sortBy, setSortBy] = useState<'price' | 'country' | 'none'>('price');
