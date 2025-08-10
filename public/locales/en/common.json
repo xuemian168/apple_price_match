@@ -193,6 +193,18 @@
       "content": "Apple Price Match is an independent comparison platform and is not affiliated with Apple Inc. All prices displayed are sourced from official Apple stores and are subject to change. We recommend verifying current pricing on official Apple websites before making any purchases. Exchange rates are updated in real-time but may not reflect instantaneous market fluctuations. All pricing comparisons are for reference only and may vary based on local taxes, promotions, and regional policies."
     }
   },
+  "calculator": {
+    "title": "Currency Calculator",
+    "amount": "Amount",
+    "from_currency": "From Currency",
+    "to_currency": "To Currency",
+    "exchange_rate": "Exchange Rate",
+    "result": "Result",
+    "swap": "Swap currencies",
+    "open": "Open calculator",
+    "close": "Close calculator",
+    "quick_amounts": "Quick amounts"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error occurred",

@@ -56,6 +56,56 @@
     "clear_search": "검색 지우기",
     "no_results": "일치하는 국가/지역을 찾을 수 없습니다"
   },
+  "calculator": {
+    "title": "환율 계산기",
+    "amount": "금액",
+    "from_currency": "출발 통화",
+    "to_currency": "대상 통화",
+    "exchange_rate": "환율",
+    "result": "결과",
+    "swap": "통화 교환",
+    "open": "계산기 열기",
+    "close": "계산기 닫기",
+    "quick_amounts": "빠른 금액"
+  },
+  "icloud": {
+    "title": "iCloud 스토리지 요금제 비교",
+    "description": "전 세계 iCloud 스토리지 플랜과 가격 비교",
+    "data_updated": "데이터 업데이트됨",
+    "cache_info": "iCloud 요금제 데이터가 로컬에 캐시됨",
+    "plans": {
+      "5gb": "5GB 무료",
+      "50gb": "50GB",
+      "200gb": "200GB", 
+      "2tb": "2TB",
+      "6tb": "6TB",
+      "12tb": "12TB"
+    },
+    "features": {
+      "storage": "저장공간",
+      "price_monthly": "월 요금",
+      "price_yearly": "년 요금",
+      "original_currency": "원본 통화",
+      "converted_price": "변환된 가격"
+    }
+  },
+  "devices": {
+    "title": "Apple 디바이스 요금제",
+    "description": "전 세계 Apple 디바이스 가격 비교",
+    "categories": {
+      "iphone": "iPhone",
+      "ipad": "iPad",
+      "mac": "Mac",
+      "watch": "Apple Watch",
+      "airpods": "AirPods"
+    }
+  },
+  "currency": {
+    "select": "통화 선택",
+    "rates_updated": "환율 업데이트됨",
+    "loading": "환율 로딩 중...",
+    "cache_warning": "환율 데이터가 로컬에 캐시됨"
+  },
   "common": {
     "loading": "로딩 중...",
     "error": "오류 발생",

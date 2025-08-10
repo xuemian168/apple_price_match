@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { CurrencySelector } from '@/components/currency/CurrencySelector';
 import { CountrySelector } from '@/components/country/CountrySelector';
+import { CurrencyCalculator } from '@/components/currency/CurrencyCalculator';
 import { iCloudPricingTable as ICloudPricingTable } from './iCloudPricingTable';
 import { AnimatedStorageSelector } from './AnimatedStorageSelector';
 import { useiCloudPricing } from '@/hooks/useiCloudPricing';
@@ -404,6 +405,14 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* Currency Calculator - Fixed positioned sidebar tool */}
+      {exchangeRates && Object.keys(exchangeRates).length > 0 && (
+        <CurrencyCalculator
+          exchangeRates={exchangeRates}
+          defaultFromCurrency={targetCurrency}
+        />
+      )}
     </div>
   );
 }
