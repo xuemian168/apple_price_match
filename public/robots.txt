@@ -1,0 +1,26 @@
+# robots.txt for Apple Price Match
+User-agent: *
+Allow: /
+
+# Allow all API endpoints for search engines
+Allow: /api/*
+
+# Sitemap location
+Sitemap: https://apple-price-match.com/sitemap.xml
+
+# Crawl delay (optional, can help with server load)
+Crawl-delay: 1
+
+# Block access to sensitive directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow specific search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

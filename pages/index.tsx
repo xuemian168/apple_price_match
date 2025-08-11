@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { ArrowRight, TrendingUp, Globe, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Layout } from '@/components/layout/Layout';
+import { useSEO } from '@/hooks/useSEO';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -25,6 +27,7 @@ const itemVariants = {
 
 export default function HomePage() {
   const { t } = useTranslation('common');
+  const { generateJSONLD } = useSEO();
 
   const features = [
     {
@@ -44,7 +47,29 @@ export default function HomePage() {
     },
   ];
 
+  // Generate structured data for homepage
+  const organizationData = generateJSONLD('Organization');
+  const webApplicationData = generateJSONLD('WebApplication');
+  
+  const combinedJSONLD = {
+    '@context': 'https://schema.org',
+    '@graph': [organizationData, webApplicationData]
+  };
+
   return (
+    <Layout 
+      title={t('site.tagline')}
+      description={t('site.description')}
+      keywords={[
+        'Apple price comparison',
+        'iCloud pricing',
+        'global Apple deals',
+        'currency converter',
+        'Apple device prices',
+        'international shopping'
+      ]}
+      jsonLD={combinedJSONLD}
+    >
     <div className="container mx-auto px-4 py-8 space-y-12">
       {/* Hero Section */}
       <motion.section
@@ -238,6 +263,7 @@ export default function HomePage() {
         </motion.div>
       </motion.section>
     </div>
+    </Layout>
   );
 }
 

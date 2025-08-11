@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- This is a placeholder sitemap. The dynamic sitemap is served from /api/sitemap.xml -->
+  <url>
+    <loc>https://apple-price-match.com</loc>
+    <lastmod>2024-01-01T00:00:00.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

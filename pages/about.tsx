@@ -5,6 +5,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { motion } from 'framer-motion';
 import { Target, Users, Zap, Heart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Layout } from '@/components/layout/Layout';
+import { useSEO } from '@/hooks/useSEO';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,6 +25,7 @@ const itemVariants = {
 
 export default function AboutPage() {
   const { t } = useTranslation('common');
+  const { generateJSONLD } = useSEO();
 
   const values = [
     {
@@ -47,8 +50,26 @@ export default function AboutPage() {
     },
   ];
 
+  // Generate structured data for about page
+  const aboutData = generateJSONLD('AboutPage', {
+    description: t('about.subtitle')
+  });
+
   return (
-    <div className="container mx-auto px-4 py-8">
+    <Layout
+      title={t('about.title')}
+      description={t('about.subtitle')}
+      keywords={[
+        'about Apple Price Match',
+        'company mission',
+        'price comparison service',
+        'Apple products',
+        'international pricing',
+        'technology stack'
+      ]}
+      jsonLD={aboutData}
+    >
+      <div className="container mx-auto px-4 py-8">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -244,7 +265,8 @@ export default function AboutPage() {
           </Card>
         </motion.section>
       </motion.div>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

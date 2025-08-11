@@ -3,12 +3,38 @@ import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DevicePlaceholder } from '@/components/pricing/DevicePlaceholder';
+import { Layout } from '@/components/layout/Layout';
+import { useSEO } from '@/hooks/useSEO';
 
 export default function DevicesPage() {
   const { t } = useTranslation('common');
+  const { generateJSONLD } = useSEO();
+
+  // Generate structured data for devices page
+  const devicesData = generateJSONLD('Product', {
+    name: 'Apple Device Pricing',
+    description: t('devices.description'),
+    lowPrice: '99',
+    highPrice: '5999',
+    currency: 'USD'
+  });
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <Layout
+      title={t('devices.title')}
+      description={t('devices.description')}
+      keywords={[
+        'Apple device prices',
+        'iPhone pricing',
+        'iPad pricing', 
+        'Mac pricing',
+        'Apple Watch pricing',
+        'international device prices',
+        'Apple device deals'
+      ]}
+      jsonLD={devicesData}
+    >
+      <div className="container mx-auto px-4 py-8">
       <div className="space-y-6">
         {/* Page Header */}
         <div className="text-center space-y-2">
@@ -23,7 +49,8 @@ export default function DevicesPage() {
         {/* Device Placeholder Component */}
         <DevicePlaceholder />
       </div>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

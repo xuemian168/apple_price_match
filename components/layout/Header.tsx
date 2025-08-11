@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import { motion } from 'framer-motion';
-import { Apple, Globe, Menu } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Apple, Globe, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Select,
@@ -29,6 +29,7 @@ export function Header({ className }: HeaderProps) {
   const { t } = useTranslation('common');
   const router = useRouter();
   const { pathname, asPath, query, locale } = router;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const changeLanguage = (newLocale: string) => {
     router.push({ pathname, query }, asPath, { locale: newLocale });
@@ -115,29 +116,48 @@ export function Header({ className }: HeaderProps) {
               variant="ghost"
               size="sm"
               className="md:hidden"
-              aria-label="Open menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <Menu className="h-5 w-5" />
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <nav className="md:hidden border-t py-2">
-          <div className="flex flex-wrap gap-1">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <Button
-                  variant={router.pathname === item.href ? "secondary" : "ghost"}
-                  size="sm"
-                  className="text-xs"
-                >
-                  {item.label}
-                </Button>
-              </Link>
-            ))}
-          </div>
-        </nav>
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.nav
+              className="md:hidden border-t"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="py-4 space-y-2">
+                {navItems.map((item) => (
+                  <Link 
+                    key={item.href} 
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Button
+                      variant={router.pathname === item.href ? "secondary" : "ghost"}
+                      size="sm"
+                      className="w-full justify-start"
+                    >
+                      {item.label}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
