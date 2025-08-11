@@ -87,6 +87,23 @@
       "wechat_hashtags": "#iCloud #Apple #Preisvergleich #Geld_sparen"
     }
   },
+  "savings": {
+    "title": "Jährliches Sparpotenzial",
+    "description": "Sehen Sie, wie viel Sie pro Jahr mit iCloud {{storage}} sparen können",
+    "max_annual_savings": "Maximale jährliche Ersparnis",
+    "savings_percentage": "Ersparnis",
+    "cheapest": "Am günstigsten",
+    "most_expensive": "Am teuersten",
+    "monthly_difference": "Monatlicher Unterschied",
+    "avg_vs_cheapest": "Durchschnitt vs günstigste (jährlich)",
+    "pro_tip": "Profi-Tipp",
+    "tip_description": "Ändern Sie Ihre Apple ID-Region für niedrigere Preise, aber halten Sie sich an die regionalen Nutzungsbedingungen.",
+    "countries_compared": "Länder verglichen",
+    "price_range": "Preisspanne",
+    "avg_price": "Durchschnitt",
+    "per_month": "/Monat",
+    "per_year": "/Jahr"
+  },
   "common": {
     "loading": "Laden...",
     "error": "Fehler aufgetreten",

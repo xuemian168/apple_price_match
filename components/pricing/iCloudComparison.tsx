@@ -12,6 +12,7 @@ import { CurrencyCalculator } from '@/components/currency/CurrencyCalculator';
 import { iCloudPricingTable as ICloudPricingTable } from './iCloudPricingTable';
 import { AnimatedStorageSelector } from './AnimatedStorageSelector';
 import { ShareButton } from './ShareButton';
+import { SavingsCard } from './SavingsCard';
 import { useiCloudPricing } from '@/hooks/useiCloudPricing';
 import { useExchangeRates } from '@/hooks/useExchangeRates';
 import { icloudPlans, getPaidPlans } from '@/data/icloud-plans';
@@ -403,7 +404,22 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
               ease: "easeOut",
               staggerChildren: 0.1
             }}
+            className="space-y-6"
           >
+            {/* Savings Card - Show annual savings potential */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+            >
+              <SavingsCard
+                plan={pricingData.plan!}
+                pricing={pricingData.pricing as any}
+                targetCurrency={targetCurrency}
+              />
+            </motion.div>
+
+            {/* Price Comparison Table */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

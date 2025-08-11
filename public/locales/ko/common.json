@@ -137,6 +137,23 @@
       "wechat_hashtags": "#iCloud #Apple #가격비교 #절약팁"
     }
   },
+  "savings": {
+    "title": "연간 절약 잠재력",
+    "description": "iCloud {{storage}}로 연간 얼마나 절약할 수 있는지 확인하세요",
+    "max_annual_savings": "최대 연간 절약액",
+    "savings_percentage": "절약",
+    "cheapest": "최저가",
+    "most_expensive": "최고가",
+    "monthly_difference": "월별 차액",
+    "avg_vs_cheapest": "평균가 vs 최저가 (연간)",
+    "pro_tip": "전문가 팁",
+    "tip_description": "Apple ID 지역을 변경하여 더 저렴한 가격에 액세스할 수 있지만 해당 지역의 서비스 약관을 준수해야 합니다.",
+    "countries_compared": "비교 국가 수",
+    "price_range": "가격 범위",
+    "avg_price": "평균 가격",
+    "per_month": "/월",
+    "per_year": "/년"
+  },
   "common": {
     "loading": "로딩 중...",
     "error": "오류 발생",

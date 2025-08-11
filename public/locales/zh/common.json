@@ -244,6 +244,23 @@
       "wechat_hashtags": "#iCloud #苹果 #价格对比 #省钱攻略"
     }
   },
+  "savings": {
+    "title": "年度省钱潜力",
+    "description": "了解使用 iCloud {{storage}} 每年可以节省多少钱",
+    "max_annual_savings": "最大年度节省",
+    "savings_percentage": "节省",
+    "cheapest": "最便宜",
+    "most_expensive": "最贵",
+    "monthly_difference": "月度差价",
+    "avg_vs_cheapest": "平均价与最低价差(年)",
+    "pro_tip": "专业提示",
+    "tip_description": "切换Apple ID地区可以享受更低价格，但需遵守相应地区的服务条款。",
+    "countries_compared": "对比国家",
+    "price_range": "价格区间",
+    "avg_price": "平均价格",
+    "per_month": "/月",
+    "per_year": "/年"
+  },
   "common": {
     "loading": "加载中...",
     "error": "发生错误",
