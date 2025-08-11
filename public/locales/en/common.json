@@ -33,7 +33,15 @@
       "last_updated": "Last Updated"
     },
     "data_updated": "Pricing data updated",
-    "cache_info": "Pricing data cached locally to reduce API calls"
+    "cache_info": "Pricing data cached locally to reduce API calls",
+    "price_overview": "Price Statistics Overview",
+    "average_monthly": "Average Monthly Price",
+    "average_yearly": "Average Yearly Price", 
+    "price_difference": "Price Difference",
+    "highest_lowest": "Highest vs Lowest",
+    "based_on": "Based on",
+    "countries": "countries/regions",
+    "region_tip": "Tip: You may access different prices by switching Apple ID regions, but must comply with respective regional terms of service"
   },
   "devices": {
     "title": "Apple Device Pricing",
@@ -204,6 +212,16 @@
     "open": "Open calculator",
     "close": "Close calculator",
     "quick_amounts": "Quick amounts"
+  },
+  "share": {
+    "button": "Share",
+    "title": "Share Price Comparison",
+    "native": "System Share",
+    "simple": "Simple Format",
+    "detailed": "Detailed Report", 
+    "wechat": "WeChat Format",
+    "copied": "Copied to clipboard!",
+    "copy_failed": "Failed to copy"
   },
   "common": {
     "loading": "Loading...",

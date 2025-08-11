@@ -33,7 +33,15 @@
       "last_updated": "最后更新"
     },
     "data_updated": "价格数据已更新",
-    "cache_info": "价格数据已缓存到本地以减少API调用"
+    "cache_info": "价格数据已缓存到本地以减少API调用",
+    "price_overview": "价格统计总览",
+    "average_monthly": "平均月付价格",
+    "average_yearly": "平均年付价格",
+    "price_difference": "价格差异", 
+    "highest_lowest": "最高与最低差价",
+    "based_on": "基于",
+    "countries": "个国家/地区",
+    "region_tip": "提示：通过切换Apple ID区域可能享受不同价格，但需遵守相应地区的服务条款"
   },
   "devices": {
     "title": "苹果设备定价",
@@ -204,6 +212,16 @@
     "open": "打开计算器",
     "close": "关闭计算器",
     "quick_amounts": "快速金额"
+  },
+  "share": {
+    "button": "分享",
+    "title": "分享价格对比",
+    "native": "系统分享",
+    "simple": "简单格式",
+    "detailed": "详细报告",
+    "wechat": "微信格式",
+    "copied": "已复制到剪贴板！",
+    "copy_failed": "复制失败"
   },
   "common": {
     "loading": "加载中...",

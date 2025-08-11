@@ -43,6 +43,17 @@ export function iCloudPricingTable({
   const { t } = useTranslation('common');
   const targetCurrencyData = getCurrencyByCode(targetCurrency);
 
+  // Calculate average monthly price
+  const averageMonthlyPrice = pricing.length > 0 
+    ? pricing.reduce((sum, item) => sum + item.priceMonthly, 0) / pricing.length 
+    : 0;
+
+  // Calculate average yearly price (if available)
+  const yearlyPrices = pricing.filter(item => item.priceYearly);
+  const averageYearlyPrice = yearlyPrices.length > 0
+    ? yearlyPrices.reduce((sum, item) => sum + (item.priceYearly || 0), 0) / yearlyPrices.length
+    : 0;
+
   const handleSort = (newSortBy: 'price' | 'country') => {
     if (!onSortChange) return;
     
@@ -255,6 +266,64 @@ export function iCloudPricingTable({
           <div className="text-center py-8 text-muted-foreground">
             No pricing data available for this plan
           </div>
+        )}
+
+        {/* Average Price Summary */}
+        {sortedPricing.length > 0 && (
+          <motion.div 
+            className="mt-6 p-4 bg-muted/50 rounded-lg border"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <div className="text-sm font-medium text-center mb-3 flex items-center justify-center gap-2">
+              <motion.span
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                📊
+              </motion.span>
+              {t('icloud.price_overview')}
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="text-center p-3 bg-background rounded-lg">
+                <div className="text-muted-foreground mb-1">{t('icloud.average_monthly')}</div>
+                <div className="text-lg font-bold text-primary">
+                  {formatCurrency(averageMonthlyPrice, targetCurrency)}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {t('icloud.based_on')} {pricing.length} {t('icloud.countries')}
+                </div>
+              </div>
+
+              {averageYearlyPrice > 0 && (
+                <div className="text-center p-3 bg-background rounded-lg">
+                  <div className="text-muted-foreground mb-1">{t('icloud.average_yearly')}</div>
+                  <div className="text-lg font-bold text-primary">
+                    {formatCurrency(averageYearlyPrice, targetCurrency)}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {t('icloud.based_on')} {yearlyPrices.length} {t('icloud.countries')}
+                  </div>
+                </div>
+              )}
+
+              <div className="text-center p-3 bg-background rounded-lg">
+                <div className="text-muted-foreground mb-1">{t('icloud.price_difference')}</div>
+                <div className="text-lg font-bold text-destructive">
+                  {formatCurrency((sortedPricing[sortedPricing.length - 1]?.priceMonthly || 0) - (sortedPricing[0]?.priceMonthly || 0), targetCurrency)}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {t('icloud.highest_lowest')}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-3 text-xs text-center text-muted-foreground">
+              💡 {t('icloud.region_tip')}
+            </div>
+          </motion.div>
         )}
       </CardContent>
     </Card>

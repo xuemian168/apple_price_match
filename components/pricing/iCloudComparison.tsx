@@ -11,6 +11,7 @@ import { CountrySelector } from '@/components/country/CountrySelector';
 import { CurrencyCalculator } from '@/components/currency/CurrencyCalculator';
 import { iCloudPricingTable as ICloudPricingTable } from './iCloudPricingTable';
 import { AnimatedStorageSelector } from './AnimatedStorageSelector';
+import { ShareButton } from './ShareButton';
 import { useiCloudPricing } from '@/hooks/useiCloudPricing';
 import { useExchangeRates } from '@/hooks/useExchangeRates';
 import { icloudPlans, getPaidPlans } from '@/data/icloud-plans';
@@ -200,6 +201,23 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
                     </motion.div>
                   </Button>
                 </motion.div>
+
+                {/* Share Button - Show only when we have pricing data */}
+                {pricingData && pricingData.pricing && pricingData.pricing.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <ShareButton
+                      plan={pricingData.plan!}
+                      pricing={pricingData.pricing as any}
+                      targetCurrency={targetCurrency}
+                    />
+                  </motion.div>
+                )}
               </div>
             </motion.div>
           </motion.div>
