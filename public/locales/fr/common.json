@@ -62,7 +62,38 @@
     "retry": "Retry",
     "save": "Save",
     "cancel": "Cancel",
-    "confirm": "Confirm",
-    "close": "Close"
+    "confirm": "Confirmer",
+    "close": "Fermer"
+  },
+  "share": {
+    "button": "Partager",
+    "title": "Partager la comparaison de prix",
+    "native": "Partage système",
+    "simple": "Format simple",
+    "detailed": "Rapport détaillé",
+    "wechat": "Format WeChat",
+    "copied": "Copié dans le presse-papiers !",
+    "copy_failed": "Échec de la copie",
+    "content": {
+      "title": "Comparaison de prix mondial iCloud {{storage}}",
+      "average_price": "Prix moyen",
+      "lowest": "Le plus bas",
+      "highest": "Le plus élevé",
+      "difference": "Différence",
+      "view_full": "Voir la comparaison complète",
+      "statistics": "Statistiques",
+      "price_range": "Fourchette de prix",
+      "compared_countries": "Pays/régions comparés",
+      "top_deals": "Top 5 des meilleures offres",
+      "tip": "Conseil : Vous pouvez accéder à différents prix en changeant la région de votre Apple ID",
+      "wechat_title": "【Bataille de prix mondial iCloud {{storage}}】",
+      "wechat_intro": "Bonnes affaires trouvées ! Les prix du stockage iCloud varient énormément entre les pays :",
+      "wechat_global_avg": "Prix moyen mondial",
+      "wechat_cheapest": "Le moins cher",
+      "wechat_most_expensive": "Le plus cher",
+      "wechat_monthly_diff": "Différence mensuelle",
+      "wechat_tool": "Outil complet de comparaison de prix",
+      "wechat_hashtags": "#iCloud #Apple #ComparaisonPrix #ÉconomiserArgent"
+    }
   }
 }

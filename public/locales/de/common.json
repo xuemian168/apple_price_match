@@ -56,13 +56,44 @@
     "clear_search": "Suche löschen",
     "no_results": "Keine Länder/Regionen gefunden"
   },
+  "share": {
+    "button": "Teilen",
+    "title": "Preisvergleich teilen",
+    "native": "System-Teilen",
+    "simple": "Einfaches Format",
+    "detailed": "Detaillierter Bericht",
+    "wechat": "WeChat-Format",
+    "copied": "In die Zwischenablage kopiert!",
+    "copy_failed": "Kopieren fehlgeschlagen",
+    "content": {
+      "title": "iCloud {{storage}} Globaler Preisvergleich",
+      "average_price": "Durchschnittspreis",
+      "lowest": "Niedrigster",
+      "highest": "Höchster",
+      "difference": "Unterschied",
+      "view_full": "Vollständigen Vergleich anzeigen",
+      "statistics": "Statistiken",
+      "price_range": "Preisspanne",
+      "compared_countries": "Verglichene Länder/Regionen",
+      "top_deals": "Top 5 beste Angebote",
+      "tip": "Tipp: Sie können durch Ändern Ihrer Apple ID-Region auf andere Preise zugreifen",
+      "wechat_title": "【iCloud {{storage}} Globaler Preis-Showdown】",
+      "wechat_intro": "Tolle Angebote gefunden! iCloud-Speicherpreise variieren dramatisch zwischen den Ländern:",
+      "wechat_global_avg": "Globaler Durchschnittspreis",
+      "wechat_cheapest": "Am günstigsten",
+      "wechat_most_expensive": "Am teuersten",
+      "wechat_monthly_diff": "Monatlicher Unterschied",
+      "wechat_tool": "Komplettes Preisvergleichstool",
+      "wechat_hashtags": "#iCloud #Apple #Preisvergleich #Geld_sparen"
+    }
+  },
   "common": {
-    "loading": "Loading...",
-    "error": "Error occurred",
-    "retry": "Retry",
-    "save": "Save",
-    "cancel": "Cancel",
-    "confirm": "Confirm",
-    "close": "Close"
+    "loading": "Laden...",
+    "error": "Fehler aufgetreten",
+    "retry": "Wiederholen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "close": "Schließen"
   }
 }

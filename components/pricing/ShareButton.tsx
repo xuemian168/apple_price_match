@@ -56,7 +56,7 @@ export function ShareButton({ plan, pricing, targetCurrency, className }: ShareB
     detailedText += `📊 ${t('share.content.statistics')}:\n`;
     detailedText += `• ${t('share.content.average_price')}: ${formatCurrency(averagePrice, targetCurrency)}\n`;
     detailedText += `• ${t('share.content.price_range')}: ${formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)} - ${formatCurrency(highestPrice?.priceMonthly || 0, targetCurrency)}\n`;
-    detailedText += `• ${t('share.content.compared_countries')}: ${pricing.length}个\n\n`;
+    detailedText += `• ${t('share.content.compared_countries')}: ${pricing.length}\n\n`;
     
     detailedText += `🏆 ${t('share.content.top_deals')}:\n`;
     topCountries.forEach((item, index) => {
