@@ -127,7 +127,7 @@ export function CurrencyCalculator({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/50 z-40 md:hidden backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 z-[55] md:hidden backdrop-blur-sm"
             onClick={() => setIsCollapsed(true)}
           />
         )}
@@ -135,7 +135,7 @@ export function CurrencyCalculator({
       
       {/* Toggle button with enhanced styling - Now draggable */}
       <motion.div 
-        className={cn("fixed z-50", isDragging ? "cursor-grabbing" : "cursor-grab")}
+        className={cn("fixed z-[60]", isDragging ? "cursor-grabbing" : "cursor-grab")}
         style={{
           bottom: isMobile ? '1rem' : '50%',
           right: '1rem',
@@ -229,7 +229,7 @@ export function CurrencyCalculator({
       {/* Calculator Panel with enhanced styling */}
       <motion.div 
         className={cn(
-          "fixed z-40 bg-gradient-to-br from-background via-background to-muted/20 border shadow-2xl backdrop-blur-md",
+          "fixed z-[55] bg-gradient-to-br from-background via-background to-muted/20 border shadow-2xl backdrop-blur-md",
           isMobile
             ? "top-0 right-0 bottom-0 w-80 border-l"
             : "top-4 right-4 bottom-4 w-80 rounded-2xl border",
