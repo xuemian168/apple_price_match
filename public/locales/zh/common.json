@@ -221,7 +221,28 @@
     "detailed": "详细报告",
     "wechat": "微信格式",
     "copied": "已复制到剪贴板！",
-    "copy_failed": "复制失败"
+    "copy_failed": "复制失败",
+    "content": {
+      "title": "iCloud {{storage}} 全球价格对比",
+      "average_price": "平均价格",
+      "lowest": "最低",
+      "highest": "最高",
+      "difference": "相差",
+      "view_full": "查看完整对比",
+      "statistics": "统计信息",
+      "price_range": "价格区间",
+      "compared_countries": "对比国家/地区",
+      "top_deals": "最优惠的5个国家/地区",
+      "tip": "提示: 通过切换Apple ID区域可能享受不同价格",
+      "wechat_title": "【iCloud {{storage}} 全球价格大比拼】",
+      "wechat_intro": "发现好价！各国iCloud储存空间价格差异巨大：",
+      "wechat_global_avg": "全球平均价",
+      "wechat_cheapest": "最便宜",
+      "wechat_most_expensive": "最贵",
+      "wechat_monthly_diff": "相差",
+      "wechat_tool": "完整价格对比工具",
+      "wechat_hashtags": "#iCloud #苹果 #价格对比 #省钱攻略"
+    }
   },
   "common": {
     "loading": "加载中...",

@@ -221,7 +221,28 @@
     "detailed": "Detailed Report", 
     "wechat": "WeChat Format",
     "copied": "Copied to clipboard!",
-    "copy_failed": "Failed to copy"
+    "copy_failed": "Failed to copy",
+    "content": {
+      "title": "iCloud {{storage}} Global Price Comparison",
+      "average_price": "Average Price",
+      "lowest": "Lowest",
+      "highest": "Highest",
+      "difference": "Difference",
+      "view_full": "View Full Comparison",
+      "statistics": "Statistics",
+      "price_range": "Price Range",
+      "compared_countries": "Compared Countries/Regions",
+      "top_deals": "Top 5 Best Deals",
+      "tip": "Tip: You may access different prices by switching Apple ID regions",
+      "wechat_title": "【iCloud {{storage}} Global Price Showdown】",
+      "wechat_intro": "Great deals found! iCloud storage prices vary dramatically across countries:",
+      "wechat_global_avg": "Global Average",
+      "wechat_cheapest": "Cheapest",
+      "wechat_most_expensive": "Most Expensive",
+      "wechat_monthly_diff": "Monthly Difference",
+      "wechat_tool": "Complete Price Comparison Tool",
+      "wechat_hashtags": "#iCloud #Apple #PriceComparison #MoneySaving"
+    }
   },
   "common": {
     "loading": "Loading...",

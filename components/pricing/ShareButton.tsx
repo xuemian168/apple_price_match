@@ -42,29 +42,30 @@ export function ShareButton({ plan, pricing, targetCurrency, className }: ShareB
     const currencySymbol = currencyData?.symbol || targetCurrency;
 
     if (type === 'simple') {
-      return `🍎 iCloud ${plan.storage} 全球价格对比\n\n💰 平均价格: ${formatCurrency(averagePrice, targetCurrency)}\n📍 最低: ${getCountryByCode(lowestPrice?.country)?.name || lowestPrice?.country} ${formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)}\n📍 最高: ${getCountryByCode(highestPrice?.country)?.name || highestPrice?.country} ${formatCurrency(highestPrice?.priceMonthly || 0, targetCurrency)}\n\n🔗 查看完整对比: ${window.location.href}`;
+      return `🍎 ${t('share.content.title', { storage: plan.storage })}\n\n💰 ${t('share.content.average_price')}: ${formatCurrency(averagePrice, targetCurrency)}\n📍 ${t('share.content.lowest')}: ${getCountryByCode(lowestPrice?.country)?.name || lowestPrice?.country} ${formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)}\n📍 ${t('share.content.highest')}: ${getCountryByCode(highestPrice?.country)?.name || highestPrice?.country} ${formatCurrency(highestPrice?.priceMonthly || 0, targetCurrency)}\n\n🔗 ${t('share.content.view_full')}: ${window.location.href}`;
     }
 
     if (type === 'wechat') {
-      return `🍎【iCloud ${plan.storage} 全球价格大比拼】\n\n💡 发现好价！各国iCloud储存空间价格差异巨大：\n\n💰 全球平均价：${currencySymbol}${averagePrice.toFixed(2)}/月\n🏆 最便宜：${getCountryByCode(lowestPrice?.country)?.name || lowestPrice?.country} ${currencySymbol}${(lowestPrice?.priceMonthly || 0).toFixed(2)}\n💸 最贵：${getCountryByCode(highestPrice?.country)?.name || highestPrice?.country} ${currencySymbol}${(highestPrice?.priceMonthly || 0).toFixed(2)}\n\n📊 相差：${currencySymbol}${((highestPrice?.priceMonthly || 0) - (lowestPrice?.priceMonthly || 0)).toFixed(2)}/月\n\n🔗 完整价格对比工具：${window.location.href}\n\n#iCloud #苹果 #价格对比 #省钱攻略`;
+      const monthlyDiff = (highestPrice?.priceMonthly || 0) - (lowestPrice?.priceMonthly || 0);
+      return `🍎${t('share.content.wechat_title', { storage: plan.storage })}\n\n💡 ${t('share.content.wechat_intro')}\n\n💰 ${t('share.content.wechat_global_avg')}: ${currencySymbol}${averagePrice.toFixed(2)}/月\n🏆 ${t('share.content.wechat_cheapest')}: ${getCountryByCode(lowestPrice?.country)?.name || lowestPrice?.country} ${currencySymbol}${(lowestPrice?.priceMonthly || 0).toFixed(2)}\n💸 ${t('share.content.wechat_most_expensive')}: ${getCountryByCode(highestPrice?.country)?.name || highestPrice?.country} ${currencySymbol}${(highestPrice?.priceMonthly || 0).toFixed(2)}\n\n📊 ${t('share.content.wechat_monthly_diff')}: ${currencySymbol}${monthlyDiff.toFixed(2)}/月\n\n🔗 ${t('share.content.wechat_tool')}: ${window.location.href}\n\n${t('share.content.wechat_hashtags')}`;
     }
 
     // Detailed format
     const topCountries = sortedByPrice.slice(0, 5);
-    let detailedText = `🍎 iCloud ${plan.storage} 全球价格详细对比\n\n`;
-    detailedText += `📊 统计信息:\n`;
-    detailedText += `• 平均价格: ${formatCurrency(averagePrice, targetCurrency)}\n`;
-    detailedText += `• 价格区间: ${formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)} - ${formatCurrency(highestPrice?.priceMonthly || 0, targetCurrency)}\n`;
-    detailedText += `• 对比国家: ${pricing.length}个\n\n`;
+    let detailedText = `🍎 ${t('share.content.title', { storage: plan.storage })}\n\n`;
+    detailedText += `📊 ${t('share.content.statistics')}:\n`;
+    detailedText += `• ${t('share.content.average_price')}: ${formatCurrency(averagePrice, targetCurrency)}\n`;
+    detailedText += `• ${t('share.content.price_range')}: ${formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)} - ${formatCurrency(highestPrice?.priceMonthly || 0, targetCurrency)}\n`;
+    detailedText += `• ${t('share.content.compared_countries')}: ${pricing.length}个\n\n`;
     
-    detailedText += `🏆 最优惠的5个国家/地区:\n`;
+    detailedText += `🏆 ${t('share.content.top_deals')}:\n`;
     topCountries.forEach((item, index) => {
       const country = getCountryByCode(item.country);
       detailedText += `${index + 1}. ${country?.flag} ${country?.name}: ${formatCurrency(item.priceMonthly, targetCurrency)}\n`;
     });
 
-    detailedText += `\n🔗 完整对比工具: ${window.location.href}`;
-    detailedText += `\n\n💡 提示: 通过切换Apple ID区域可能享受不同价格`;
+    detailedText += `\n🔗 ${t('share.content.view_full')}: ${window.location.href}`;
+    detailedText += `\n\n💡 ${t('share.content.tip')}`;
 
     return detailedText;
   };
@@ -84,7 +85,7 @@ export function ShareButton({ plan, pricing, targetCurrency, className }: ShareB
     if (typeof navigator !== 'undefined' && 'share' in navigator) {
       try {
         await navigator.share({
-          title: `iCloud ${plan.storage} 价格对比`,
+          title: t('share.content.title', { storage: plan.storage }),
           text: generateShareText('simple'),
           url: window.location.href,
         });
@@ -122,10 +123,10 @@ export function ShareButton({ plan, pricing, targetCurrency, className }: ShareB
         <div className="p-3 space-y-2">
           <div className="text-sm font-medium">{t('share.title')}</div>
           <div className="text-xs text-muted-foreground">
-            📊 平均价格: {formatCurrency(averagePrice, targetCurrency)}
+            📊 {t('share.content.average_price')}: {formatCurrency(averagePrice, targetCurrency)}
           </div>
           <div className="text-xs text-muted-foreground">
-            🏆 最低: {getCountryByCode(lowestPrice?.country)?.flag} {formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)}
+            🏆 {t('share.content.lowest')}: {getCountryByCode(lowestPrice?.country)?.flag} {formatCurrency(lowestPrice?.priceMonthly || 0, targetCurrency)}
           </div>
         </div>
         

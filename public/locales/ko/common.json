@@ -106,6 +106,37 @@
     "loading": "환율 로딩 중...",
     "cache_warning": "환율 데이터가 로컬에 캐시됨"
   },
+  "share": {
+    "button": "공유",
+    "title": "가격 비교 공유",
+    "native": "시스템 공유",
+    "simple": "간단한 형식",
+    "detailed": "상세 보고서",
+    "wechat": "WeChat 형식",
+    "copied": "클립보드에 복사되었습니다!",
+    "copy_failed": "복사에 실패했습니다",
+    "content": {
+      "title": "iCloud {{storage}} 글로벌 가격 비교",
+      "average_price": "평균 가격",
+      "lowest": "최저가",
+      "highest": "최고가",
+      "difference": "가격 차이",
+      "view_full": "전체 비교 보기",
+      "statistics": "통계 정보",
+      "price_range": "가격 범위",
+      "compared_countries": "비교된 국가/지역",
+      "top_deals": "가장 저렴한 5개 국가/지역",
+      "tip": "팁: Apple ID 지역을 변경하면 다른 가격에 액세스할 수 있습니다",
+      "wechat_title": "【iCloud {{storage}} 글로벌 가격 대결】",
+      "wechat_intro": "좋은 가격 발견! 각국 iCloud 스토리지 가격에 큰 차이가 있습니다:",
+      "wechat_global_avg": "글로벌 평균 가격",
+      "wechat_cheapest": "최저가",
+      "wechat_most_expensive": "최고가",
+      "wechat_monthly_diff": "월별 차액",
+      "wechat_tool": "완전한 가격 비교 도구",
+      "wechat_hashtags": "#iCloud #Apple #가격비교 #절약팁"
+    }
+  },
   "common": {
     "loading": "로딩 중...",
     "error": "오류 발생",
