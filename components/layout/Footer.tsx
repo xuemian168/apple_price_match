@@ -84,7 +84,7 @@ export function Footer({ className }: FooterProps) {
         <div className="border-t pt-6 mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
-              © {currentYear} Apple Price Match. All rights reserved.
+              © {currentYear} <Link href="https://www.ict.run/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">ICT.RUN</Link>. All rights reserved.
             </div>
             
             <div className="flex items-center gap-4">
@@ -93,7 +93,7 @@ export function Footer({ className }: FooterProps) {
               </div>
               
               <Link
-                href="https://github.com"
+                href="https://github.com/xuemian168/apple_price_match"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
