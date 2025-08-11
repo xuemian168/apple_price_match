@@ -110,8 +110,8 @@ export function CurrencyCalculator({
     if (typeof window === 'undefined') return { top: 0, bottom: 0, left: 0, right: 0 };
     
     return {
-      top: isMobile ? 16 : -window.innerHeight / 2 + 50,
-      bottom: isMobile ? window.innerHeight - 80 : window.innerHeight / 2 - 50,
+      top: isMobile ? -window.innerHeight + 150 : -window.innerHeight / 2 + 50,
+      bottom: isMobile ? -50 : window.innerHeight / 2 - 50,
       left: -window.innerWidth + 100,
       right: 50,
     };
@@ -137,9 +137,9 @@ export function CurrencyCalculator({
       <motion.div 
         className={cn("fixed z-50", isDragging ? "cursor-grabbing" : "cursor-grab")}
         style={{
-          top: isMobile ? '1rem' : '50%',
+          bottom: isMobile ? '1rem' : '50%',
           right: '1rem',
-          transform: isMobile ? 'none' : 'translateY(-50%)',
+          transform: isMobile ? 'none' : 'translateY(50%)',
         }}
         drag
         dragMomentum={false}
