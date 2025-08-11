@@ -51,7 +51,7 @@ export default function AboutPage() {
   ];
 
   // Generate structured data for about page
-  const aboutData = generateJSONLD('AboutPage', {
+  const aboutData = generateJSONLD('Organization', {
     description: t('about.subtitle')
   });
 
