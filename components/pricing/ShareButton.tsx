@@ -15,6 +15,7 @@ import { iCloudPricing, iCloudPlan } from '@/types';
 import { getCountryByCode } from '@/data/countries';
 import { getCurrencyByCode } from '@/data/currencies';
 import { formatCurrency } from '@/lib/utils';
+import { copyToClipboard, getClipboardDebugInfo } from '@/lib/clipboard';
 
 interface ShareButtonProps {
   plan: iCloudPlan;
@@ -72,11 +73,24 @@ export function ShareButton({ plan, pricing, targetCurrency, className }: ShareB
 
   const handleCopy = async (text: string, type: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedText(type);
-      toast.success(t('share.copied'));
-      setTimeout(() => setCopiedText(null), 2000);
+      // 添加调试信息
+      const debugInfo = getClipboardDebugInfo();
+      console.log('Clipboard debug info:', debugInfo);
+      
+      const success = await copyToClipboard(text);
+      
+      if (success) {
+        setCopiedText(type);
+        toast.success(t('share.copied'));
+        setTimeout(() => setCopiedText(null), 2000);
+      } else {
+        // 提供更详细的错误信息
+        console.error('Copy failed - Debug info:', debugInfo);
+        toast.error(t('share.copy_failed'));
+      }
     } catch (err) {
+      console.error('Copy failed with error:', err);
+      console.error('Debug info:', getClipboardDebugInfo());
       toast.error(t('share.copy_failed'));
     }
   };

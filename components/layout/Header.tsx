@@ -15,7 +15,6 @@ import {
 import { MobileMenuButton } from './MobileMenu';
 import { DesktopNavigation } from './DesktopNavigation';
 import { cn } from '@/lib/utils';
-import LiquidGlass from 'liquid-glass-react';
 
 interface HeaderProps {
   className?: string;

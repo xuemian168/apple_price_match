@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { Home, Cloud, Smartphone, Info } from 'lucide-react';
 import { useNavigationOptimizer, useOptimizedNavigation } from './NavigationOptimizer';
 import { cn } from '@/lib/utils';
-import LiquidGlass from 'liquid-glass-react';
 
 // Desktop Navigation Context
 interface DesktopNavigationContextType {
