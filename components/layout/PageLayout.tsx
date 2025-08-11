@@ -2,13 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import { Header } from './Header';
-import { Footer } from './Footer';
 import { Breadcrumbs } from './Breadcrumbs';
-import { PageTransition } from './PageTransition';
 import { cn } from '@/lib/utils';
 
-interface LayoutProps {
+interface PageLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
@@ -19,10 +16,10 @@ interface LayoutProps {
   canonical?: string;
   className?: string;
   jsonLD?: object;
+  showBreadcrumbs?: boolean;
 }
 
-
-export function Layout({ 
+export function PageLayout({ 
   children, 
   title, 
   description, 
@@ -32,8 +29,9 @@ export function Layout({
   noindex = false,
   canonical,
   className,
-  jsonLD 
-}: LayoutProps) {
+  jsonLD,
+  showBreadcrumbs = true
+}: PageLayoutProps) {
   const { t } = useTranslation('common');
   const router = useRouter();
   
@@ -120,21 +118,13 @@ export function Layout({
         )}
       </Head>
 
-      <div className="min-h-screen bg-background font-sans antialiased">
-        <div className="relative flex min-h-screen flex-col">
-          <Header />
-          
-          <main className={cn("flex-1 pt-16", className)}>
-            <div className="container mx-auto px-4 pt-4">
-              <Breadcrumbs />
-            </div>
-            <PageTransition>
-              {children}
-            </PageTransition>
-          </main>
-          
-          <Footer />
-        </div>
+      <div className={cn("", className)}>
+        {showBreadcrumbs && (
+          <div className="container mx-auto px-4 pt-4">
+            <Breadcrumbs />
+          </div>
+        )}
+        {children}
       </div>
     </>
   );

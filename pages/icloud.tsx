@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { iCloudComparison as ICloudComparison } from '@/components/pricing/iCloudComparison';
-import { Layout } from '@/components/layout/Layout';
+import { PageLayout } from '@/components/layout/PageLayout';
 import { useSEO } from '@/hooks/useSEO';
 
 export default function iCloudPage() {
@@ -20,7 +20,7 @@ export default function iCloudPage() {
   });
 
   return (
-    <Layout
+    <PageLayout
       title={t('icloud.title')}
       description={t('icloud.description')}
       keywords={[
@@ -53,7 +53,7 @@ export default function iCloudPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </PageLayout>
   );
 }
 

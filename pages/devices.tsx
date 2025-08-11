@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DevicePlaceholder } from '@/components/pricing/DevicePlaceholder';
-import { Layout } from '@/components/layout/Layout';
+import { PageLayout } from '@/components/layout/PageLayout';
 import { useSEO } from '@/hooks/useSEO';
 
 export default function DevicesPage() {
@@ -20,7 +20,7 @@ export default function DevicesPage() {
   });
 
   return (
-    <Layout
+    <PageLayout
       title={t('devices.title')}
       description={t('devices.description')}
       keywords={[
@@ -50,7 +50,7 @@ export default function DevicesPage() {
         <DevicePlaceholder />
       </div>
       </div>
-    </Layout>
+    </PageLayout>
   );
 }
 

@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { motion } from 'framer-motion';
 import { Target, Users, Zap, Heart } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Layout } from '@/components/layout/Layout';
+import { PageLayout } from '@/components/layout/PageLayout';
 import { useSEO } from '@/hooks/useSEO';
 
 const containerVariants = {
@@ -56,7 +56,7 @@ export default function AboutPage() {
   });
 
   return (
-    <Layout
+    <PageLayout
       title={t('about.title')}
       description={t('about.subtitle')}
       keywords={[
@@ -266,7 +266,7 @@ export default function AboutPage() {
         </motion.section>
       </motion.div>
       </div>
-    </Layout>
+    </PageLayout>
   );
 }
 
