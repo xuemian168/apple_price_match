@@ -261,6 +261,23 @@
     "per_month": "/月",
     "per_year": "/年"
   },
+  "sharing": {
+    "title": "拼车计算器", 
+    "description": "计算与家人朋友共享 {{storage}} 时的人均价格",
+    "description_with_country": "基于{{country}}最优价格{{price}}/月，计算{{storage}}拼车人均价格",
+    "member_count": "拼车人数",
+    "people": "人",
+    "max_members": "最多{{count}}人",
+    "per_person": "每人",
+    "vs_solo": "对比单人使用",
+    "monthly_savings": "月度节省",
+    "annual_savings": "年度节省",
+    "price_comparison": "不同人数价格对比",
+    "important_note": "重要提醒",
+    "family_sharing_note": "拼车需要使用苹果家庭共享功能，请确保与信任的人共享，并明确付款责任。共享者可以访问家庭成员的部分信息。",
+    "click_for_sharing": "拼车",
+    "selected_for_sharing": "已选中"
+  },
   "common": {
     "loading": "加载中...",
     "error": "发生错误",

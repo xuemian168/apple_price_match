@@ -104,6 +104,23 @@
     "per_month": "/mes",
     "per_year": "/año"
   },
+  "sharing": {
+    "title": "Calculadora de compartir familiar",
+    "description": "Calcula el precio por persona al compartir {{storage}} con familia y amigos",
+    "description_with_country": "Basado en el mejor precio {{price}}/mes de {{country}}, calcular el costo por persona para compartir {{storage}}",
+    "member_count": "Número de miembros",
+    "people": "personas",
+    "max_members": "Máximo {{count}} personas",
+    "per_person": "por persona",
+    "vs_solo": "vs. uso individual",
+    "monthly_savings": "Ahorro mensual",
+    "annual_savings": "Ahorro anual",
+    "price_comparison": "Comparación de precios por tamaño de grupo",
+    "important_note": "Nota importante",
+    "family_sharing_note": "Compartir requiere Compartir en familia de Apple. Solo comparte con personas de confianza y aclara las responsabilidades de pago. Los miembros compartidos pueden acceder a cierta información de los miembros de la familia.",
+    "click_for_sharing": "Clic para compartir",
+    "selected_for_sharing": "Seleccionado"
+  },
   "common": {
     "loading": "Cargando...",
     "error": "Error ocurrido",

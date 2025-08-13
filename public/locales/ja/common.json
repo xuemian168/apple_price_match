@@ -116,6 +116,23 @@
     "per_month": "/月",
     "per_year": "/年"
   },
+  "sharing": {
+    "title": "ファミリー共有計算機",
+    "description": "家族や友人と{{storage}}を共有する際の一人当たり価格を計算",
+    "description_with_country": "{{country}}の最安価格{{price}}/月を基に{{storage}}共有時の一人当たり価格を計算",
+    "member_count": "共有人数",
+    "people": "人",
+    "max_members": "最大{{count}}人",
+    "per_person": "一人当たり",
+    "vs_solo": "vs. 個人使用",
+    "monthly_savings": "月間節約額",
+    "annual_savings": "年間節約額",
+    "price_comparison": "人数別価格比較",
+    "important_note": "重要な注意事項",
+    "family_sharing_note": "共有にはAppleファミリー共有が必要です。信頼できる人とのみ共有し、支払い責任を明確にしてください。共有メンバーは家族の一部情報にアクセスできます。",
+    "click_for_sharing": "クリックで共有",
+    "selected_for_sharing": "選択中"
+  },
   "common": {
     "loading": "読み込み中...",
     "error": "エラーが発生しました",

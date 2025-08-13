@@ -13,6 +13,7 @@ import { iCloudPricingTable as ICloudPricingTable } from './iCloudPricingTable';
 import { AnimatedStorageSelector } from './AnimatedStorageSelector';
 import { ShareButton } from './ShareButton';
 import { SavingsCard } from './SavingsCard';
+import { SharingCalculatorCard } from './SharingCalculatorCard';
 import { useiCloudPricing } from '@/hooks/useiCloudPricing';
 import { useExchangeRates } from '@/hooks/useExchangeRates';
 import { icloudPlans, getPaidPlans } from '@/data/icloud-plans';
@@ -30,6 +31,7 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
   const [showOriginalPrices, setShowOriginalPrices] = useState(true);
   const [sortBy, setSortBy] = useState<'price' | 'country' | 'none'>('price');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [selectedCountryForSharing, setSelectedCountryForSharing] = useState<string | null>(null);
 
   const { 
     data: pricingData, 
@@ -419,6 +421,20 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
               />
             </motion.div>
 
+            {/* Family Sharing Calculator - Show for plans that support it */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+            >
+              <SharingCalculatorCard
+                plan={pricingData.plan!}
+                pricing={pricingData.pricing as any}
+                targetCurrency={targetCurrency}
+                selectedCountryCode={selectedCountryForSharing}
+              />
+            </motion.div>
+
             {/* Price Comparison Table */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -434,6 +450,8 @@ export function iCloudComparison({ className }: iCloudComparisonProps) {
                 sortBy={sortBy}
                 sortOrder={sortOrder}
                 onSortChange={handleSortChange}
+                onCountrySelect={setSelectedCountryForSharing}
+                selectedCountryForSharing={selectedCountryForSharing}
               />
             </motion.div>
           </motion.div>

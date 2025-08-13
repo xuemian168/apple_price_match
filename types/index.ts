@@ -19,6 +19,7 @@ export interface iCloudPlan {
   storage: string; // e.g., '5GB', '50GB', '200GB', '2TB'
   storageBytes: number; // Storage in bytes for comparison
   isFree: boolean;
+  supportsFamilySharing?: boolean; // Whether this plan supports Apple Family Sharing (200GB+)
 }
 
 export interface iCloudPricing {
@@ -88,4 +89,46 @@ export interface PricingComparisonResult {
   pricing: (iCloudPricing | DevicePricing)[];
   exchangeRates: Record<string, number>;
   lastUpdated: string;
+}
+
+// Family Sharing / Car-pooling types
+export interface SharingCalculation {
+  memberCount: number;
+  pricePerPerson: number;
+  annualSavingsPerPerson: number;
+  totalSavings: number;
+}
+
+export interface SharingData {
+  plan: iCloudPlan;
+  originalMonthlyPrice: number;
+  targetCurrency: string;
+  calculations: SharingCalculation[]; // For different member counts (2-6)
+}
+
+// Apple Music types
+export interface AppleMusicPlan {
+  id: string;
+  name: string; // e.g., 'Individual', 'Family', 'Student'
+  maxUsers: number; // 1 for individual, 6 for family, 1 for student
+  features: string[]; // List of features
+  isStudentPlan: boolean;
+  supportsFamilySharing: boolean;
+}
+
+export interface AppleMusicPricing {
+  country: string; // Country code
+  currency: string; // Currency code
+  plan: string; // Plan ID
+  priceMonthly: number;
+  priceYearly?: number;
+  originalCurrency: string;
+  originalPriceMonthly: number;
+  originalPriceYearly?: number;
+  lastUpdated: string; // ISO date string
+  studentDiscountAvailable?: boolean;
+  freeTrial?: {
+    duration: number; // Days
+    available: boolean;
+  };
 }

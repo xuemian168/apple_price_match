@@ -26,6 +26,8 @@ interface iCloudPricingTableProps {
   sortBy?: 'price' | 'country' | 'none';
   sortOrder?: 'asc' | 'desc';
   onSortChange?: (sortBy: 'price' | 'country' | 'none', sortOrder: 'asc' | 'desc') => void;
+  onCountrySelect?: (countryCode: string) => void;
+  selectedCountryForSharing?: string | null;
   className?: string;
 }
 
@@ -38,6 +40,8 @@ export function iCloudPricingTable({
   sortBy = 'price',
   sortOrder = 'asc',
   onSortChange,
+  onCountrySelect,
+  selectedCountryForSharing,
   className,
 }: iCloudPricingTableProps) {
   const { t } = useTranslation('common');
@@ -151,13 +155,29 @@ export function iCloudPricingTable({
                 return (
                   <TableRow
                     key={`${item.country}-${item.plan}`}
-                    className="hover:bg-muted/50"
+                    className={`hover:bg-muted/50 ${
+                      plan.supportsFamilySharing ? 'cursor-pointer' : ''
+                    } ${
+                      selectedCountryForSharing === item.country ? 'bg-purple-50 dark:bg-purple-950/30 border-l-4 border-purple-500' : ''
+                    }`}
+                    onClick={() => {
+                      if (plan.supportsFamilySharing && onCountrySelect) {
+                        onCountrySelect(item.country === selectedCountryForSharing ? '' : item.country);
+                      }
+                    }}
                   >
                       <TableCell className="font-medium">
                         <div className="flex items-center gap-2">
                           <CountryFlag countryCode={item.country} size="md" />
-                          <div>
-                            <div>{country?.name}</div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2">
+                              <span>{country?.name}</span>
+                              {plan.supportsFamilySharing && (
+                                <span className="text-xs text-purple-600 dark:text-purple-400">
+                                  👥 {selectedCountryForSharing === item.country ? t('sharing.selected_for_sharing') : t('sharing.click_for_sharing')}
+                                </span>
+                              )}
+                            </div>
                             <div className="text-xs text-muted-foreground">
                               {item.currency}
                             </div>

@@ -104,6 +104,23 @@
     "per_month": "/Monat",
     "per_year": "/Jahr"
   },
+  "sharing": {
+    "title": "Familienfreigabe-Rechner",
+    "description": "Berechnen Sie den Preis pro Person beim Teilen von {{storage}} mit Familie und Freunden",
+    "description_with_country": "Basierend auf dem besten Preis {{price}}/Monat aus {{country}}, berechnen Sie die Kosten pro Person für {{storage}}-Sharing",
+    "member_count": "Anzahl Mitglieder",
+    "people": "Personen",
+    "max_members": "Maximal {{count}} Personen",
+    "per_person": "pro Person",
+    "vs_solo": "vs. Einzelnutzung",
+    "monthly_savings": "Monatliche Ersparnis",
+    "annual_savings": "Jährliche Ersparnis",
+    "price_comparison": "Preisvergleich nach Gruppengröße",
+    "important_note": "Wichtiger Hinweis",
+    "family_sharing_note": "Für die Freigabe ist Apple Familienfreigabe erforderlich. Teilen Sie nur mit vertrauenswürdigen Personen und klären Sie Zahlungsverantwortlichkeiten. Geteilte Mitglieder können auf einige Familienmitglieder-Informationen zugreifen.",
+    "click_for_sharing": "Klicken zum Teilen",
+    "selected_for_sharing": "Ausgewählt"
+  },
   "common": {
     "loading": "Laden...",
     "error": "Fehler aufgetreten",

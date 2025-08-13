@@ -19,24 +19,28 @@ export const icloudPlans: iCloudPlan[] = [
     storage: '200GB',
     storageBytes: parseStorageToBytes('200GB'),
     isFree: false,
+    supportsFamilySharing: true,
   },
   {
     id: '2tb',
     storage: '2TB',
     storageBytes: parseStorageToBytes('2TB'),
     isFree: false,
+    supportsFamilySharing: true,
   },
   {
     id: '6tb',
     storage: '6TB',
     storageBytes: parseStorageToBytes('6TB'),
     isFree: false,
+    supportsFamilySharing: true,
   },
   {
     id: '12tb',
     storage: '12TB',
     storageBytes: parseStorageToBytes('12TB'),
     isFree: false,
+    supportsFamilySharing: true,
   },
 ];
 

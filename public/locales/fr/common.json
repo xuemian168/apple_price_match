@@ -112,5 +112,23 @@
     "avg_price": "Moyenne",
     "per_month": "/mois",
     "per_year": "/an"
-  }
+  },
+  "sharing": {
+    "title": "Calculateur de partage familial",
+    "description": "Calculer le prix par personne lors du partage de {{storage}} avec la famille et les amis",
+    "description_with_country": "Basé sur le meilleur prix {{price}}/mois de {{country}}, calculer le coût par personne pour le partage {{storage}}",
+    "member_count": "Nombre de membres",
+    "people": "personnes",
+    "max_members": "Maximum {{count}} personnes",
+    "per_person": "par personne",
+    "vs_solo": "vs. utilisation seule",
+    "monthly_savings": "Économies mensuelles",
+    "annual_savings": "Économies annuelles",
+    "price_comparison": "Comparaison des prix par taille de groupe",
+    "important_note": "Note importante",
+    "family_sharing_note": "Le partage nécessite le partage familial Apple. Ne partagez qu'avec des personnes de confiance et clarifiez les responsabilités de paiement. Les membres partagés peuvent accéder à certaines informations des membres de la famille.",
+    "click_for_sharing": "Cliquez pour partager",
+    "selected_for_sharing": "Sélectionné"
+  },
+  "common": {
 }
